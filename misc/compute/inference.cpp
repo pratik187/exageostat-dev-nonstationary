@@ -156,13 +156,16 @@ int predict(double *x, double *y, double *Z_values, double startx, double endx, 
     vector<float> processed_grid_float(processed_grid.begin(), processed_grid.end());
     
     char cwd[PATH_MAX];
+    char FileLoc[100];
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
     printf("Current working dir: %s\n", cwd);
     } else {
     perror("getcwd() error");
     }
     // cout << "I am here \n "; 
-    cppflow::model model("/home/nagp/model/Model_Example");
+    snprintf(FileLoc, 100, "%s/Model_Example", cwd);
+    printf("Current working dir: %s\n", FileLoc);
+    cppflow::model model(FileLoc);
     // cppflow::model model("/home/nagp/exageostat-dev/misc/compute/model/SavedModel.pb");
     
     vector<int64_t> sh = {100, 100};
