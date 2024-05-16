@@ -69,6 +69,7 @@ Supported Covariance Functions:
 7. Bivariate Space/Time Matérn (Gaussian/Stationary)
 8. Tukey g-and-h Univariate Matérn (non-Gaussian/Stationary)
 9. Tukey g-and-h Univariate Power Exponential (non-Gaussian/Stationary)
+10. Univariate Matérn (Gaussian/Non-Stationary)
 
 Programming models:
 1.  MPI
@@ -89,43 +90,30 @@ Installation
 Installation requires at least **CMake** of version 2.8.12. To build ExaGeoStat,
 please follow these instructions:
 
-1.  Get  from git repository
+1.  Download and save the following [installation scripts]([https://drive.google.com/drive/folders/1ORpAVR891K17UgEawpd8eVsK5viBgdEe?usp=drive_link]) in the home directory then run the following commands from the command prompt. 
 
-        git clone git@github.com:ecrc/exageostat
-
-    or
-
-        git clone https://github.com/ecrc/exageostat
-
+        `bash install_tf_dependencies.sh
+        bash install_exageostat-dev-nonstationary.sh`
+    
 2.  Go into ExaGeoStat folder
 
-        cd exageostat
+        `cd exageostat-dev-nonstationary`
 
-3.  Get submodules
+3.  Download the Model_Example folder from [here]([https://drive.google.com/drive/folders/1qQH6PMv7zUii89pvTs50zaaWbq2Z2uIN?usp=sharing]) and place it inside `exageostat-dev-nonstationary/build` directory
 
-        git submodule update --init --recursive
+4.  Go to `build` directory
 
-4.  Create build directory and go there
+        `cd build`
 
-        mkdir -p build && cd build
-
-5.  Use CMake to get all the dependencies
-
-        cmake .. -DCMAKE_INSTALL_PREFIX=/path/to/install/  -DExaGeoStat_SCHED_STARPU=ON   -DEXAGEOSTAT_USE_NETCDF=ON -DEXAGEOSTAT_USE_HICMA=ON -DEXAGEOSTAT_USE_CHAMELEON=ON -DEXAGEOSTAT_INSTALL_DEPS=ON -DBUILD_SHARED_LIBS=ON
-
-6.  Build EXAGEOSTAT
+5.  Build EXAGEOSTAT
 
         make -j
 
-7.  Build local documentation (optional)
+6.  Build local documentation (optional)
 
         make docs
 
-8.  Install EXAGEOSTAT
-
-        make install
-
-9. Add line
+7. Add line
 
         export PKG_CONFIG_PATH=/path/to/install/lib/pkgconfig:$PKG_CONFIG_PATH
 
@@ -135,6 +123,17 @@ Now you can use pkg-config executable to collect compiler and linker flags for
 EXAGEOSTAT.
 
 Check docs/install.md for more installations details.
+
+Example
+============
+
+6.  Check the installation by running the following example
+
+        `./examples/synthetic_dmle_test --test --N=20000 --dts=960 --ncores=30 --computation=exact --kernel=?:?:?:?:?:? --ikernel=0.02:0.8:0.6:0.1:1:1 --olb=0.001:0.001:0.001:0.001:0.001:0.01 --oub=5:5:5:5:5:5 --zvecs=1 --opt_iters=1000 --opt_tol=7 --seed=3 --kernel_fun=univariate_matern_non_stat_estimation --log`
+
+The above will generate a nonstationary data with 20k locations. The dataset is generated and parameters are estimated with two splits. Parameter estimations for each of the splits will be printed in the terminal at the end. 
+      
+   
 
 References
 ==========
