@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['active',['active',['../coherency_8h.html#a4c43b1d96b28f38db7216e5d3474df8a',1,'_starpu_data_state']]],
+  ['active_5fchildren',['active_children',['../coherency_8h.html#afa497e8a8deada1aec55eed1c9642bcd',1,'_starpu_data_state']]],
+  ['active_5freadonly_5fchildren',['active_readonly_children',['../coherency_8h.html#aed1ae0d3285a8cf0ded84eb412192f9d',1,'_starpu_data_state']]],
+  ['active_5ftask_5falias_5fcount',['active_task_alias_count',['../struct__starpu__job.html#ab27acb6520629d616f1ce6ebf11149ef',1,'_starpu_job']]],
+  ['all',['all',['../graph_8h.html#aad4d6899ab62810357bdc3efaa4e3865',1,'_starpu_graph_node']]],
+  ['all_5fcpu_5fworkers_5fcpuset',['all_cpu_workers_cpuset',['../starpurm__private_8h.html#a5b427009bd90f5856525c55269293a56',1,'s_starpurm']]],
+  ['all_5fcuda_5fdevice_5fworkers_5fcpuset',['all_cuda_device_workers_cpuset',['../starpurm__private_8h.html#a09cd95b18a44717d6d96bf21c0980475',1,'s_starpurm']]],
+  ['all_5fdevice_5fworkers_5fcpuset',['all_device_workers_cpuset',['../starpurm__private_8h.html#a0506013fa3fd8e22b302cd76bbe1812c',1,'s_starpurm']]],
+  ['all_5fmic_5fdevice_5fworkers_5fcpuset',['all_mic_device_workers_cpuset',['../starpurm__private_8h.html#aedfb6bed0f3edb1b2ccf5a9baf4df095',1,'s_starpurm']]],
+  ['all_5fopencl_5fdevice_5fworkers_5fcpuset',['all_opencl_device_workers_cpuset',['../starpurm__private_8h.html#abf1ed12eb66fe3c46ea59bbc6248224f',1,'s_starpurm']]],
+  ['alloc_5fincoming',['alloc_incoming',['../graph_8h.html#a3b4a7dd09a580b438ba6abec584ac07a',1,'_starpu_graph_node']]],
+  ['alloc_5foutgoing',['alloc_outgoing',['../graph_8h.html#aad8800af3e651f557b3c621b13c9438c',1,'_starpu_graph_node']]],
+  ['allocated',['allocated',['../coherency_8h.html#af75e851c1c42da0b98d6b57b2bd878ef',1,'_starpu_data_replicate']]],
+  ['arbitered_5freq_5flist',['arbitered_req_list',['../coherency_8h.html#a28cfd9bcba3ccbfc893d7799884a6493',1,'_starpu_data_state']]],
+  ['arch',['arch',['../group__workers.html#a8f065dce17dde715e03d6b3943c7b21b',1,'_starpu_worker']]],
+  ['automatically_5fallocated',['automatically_allocated',['../coherency_8h.html#a650866b62fda49dfbe01ae95eab7b140',1,'_starpu_data_replicate']]],
+  ['awake_5fworkers',['awake_workers',['../struct__starpu__sched__ctx.html#a308b8da8ba2e1e3f06bdbd621fce322a',1,'_starpu_sched_ctx']]]
+];

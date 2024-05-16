@@ -1,0 +1,109 @@
+image: registry.gitlab.inria.fr/solverstack/docker/distrib
+
+stages:
+  - build
+  - test
+  - sonar
+#  - deploy
+
+before_script:
+  - git submodule update --init --recursive
+  - mkdir -p build
+
+hqr_build_linux:
+  stage: build
+  artifacts:
+    name: hqr_build_linux
+    expire_in: 42 minutes
+    untracked: true
+  script:
+    - cd build
+    - cmake .. -DCMAKE_INSTALL_PREFIX=${PWD}/../install -DBUILD_SHARED_LIBS=ON -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_C_FLAGS="-O0 -g -fPIC --coverage -Wall -fdiagnostics-show-option -fno-inline" -DCMAKE_EXE_LINKER_FLAGS="--coverage" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON | tee ../hqr-build.log
+    - ctest --no-compress-output -V -j 5
+            -D ExperimentalBuild
+            -D ExperimentalSubmit | tee -a hqr_build.log
+    - make install | tee -a ../hqr-build.log
+  only:
+    - branches
+    - master@solverstack/hqr
+
+hqr_test_linux:
+  stage: test
+  dependencies:
+    - hqr_build_linux
+  artifacts:
+    name: hqr_test_linux
+    expire_in: 42 minutes
+    untracked: true
+  script:
+    - source install/bin/hqr_env.sh
+    - (cd build &&
+       eval "ctest -D ExperimentalTest
+            -D ExperimentalCoverage
+            -D ExperimentalSubmit | tee ../hqr-tests.log")
+    - lcov --directory . --capture --output-file hqr.lcov
+    - lcov --summary hqr.lcov | tee -a hqr-gcov.log
+
+hqr_sonar:
+  stage: sonar
+  dependencies:
+  - hqr_build_linux
+  - hqr_test_linux
+  artifacts:
+    name: hqr_sonar
+    expire_in: 1 week
+    paths:
+      - hqr-coverage.xml
+      - hqr-cppcheck.xml
+      - hqr-rats.xml
+      - sonar.log
+  script:
+    - ./analysis.sh
+  only:
+    - master@solverstack/hqr
+
+hqr_build_macosx:
+  tags: ['macosx']
+  stage: build
+  artifacts:
+    name: hqr_build_macosx
+    expire_in: 42 minutes
+    untracked: true
+  script:
+    - cd build
+    - cmake .. -DCMAKE_INSTALL_PREFIX=${PWD}/../install -DBUILD_SHARED_LIBS=ON -DCMAKE_VERBOSE_MAKEFILE=ON | tee ../hqr-build.log
+    - ctest --no-compress-output -V -j 5
+            -D ExperimentalBuild
+            -D ExperimentalSubmit | tee -a hqr_build.log
+    - make install | tee -a ../hqr-build.log
+  only:
+    - branches
+    - master@solverstack/hqr
+
+hqr_test_macosx:
+  tags: ['macosx']
+  stage: test
+  dependencies:
+    - hqr_build_macosx
+  artifacts:
+    name: hqr_test_macosx
+    expire_in: 42 minutes
+    untracked: true
+  script:
+    - source install/bin/hqr_env.sh
+    - (cd build &&
+       eval "ctest -D ExperimentalTest
+            -D ExperimentalCoverage
+            -D ExperimentalSubmit | tee ../hqr-tests.log")
+
+# pages:
+#   stage: deploy
+#   script:
+#     - cmake . -DBUILD_DOCUMENTATION=ON
+#     - make
+#     - mv docs/out/html ../public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - master@solverstack/hqr

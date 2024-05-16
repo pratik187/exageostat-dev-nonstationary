@@ -1,0 +1,29 @@
+---
+stages:
+  - build
+  - test
+  - analyse
+  - deploy
+
+before_script:
+  - git submodule update --init --recursive
+  - source .gitlab-ci-env.sh $SIMU
+  - mkdir -p build-$VERSION
+
+include:
+  - .gitlab/common.yml
+  - .gitlab/build.yml
+  - .gitlab/test_starpu.yml
+  - .gitlab/test_starpu_simgrid.yml
+  - .gitlab/test_parsec.yml
+  - .gitlab/test_quark.yml
+  - .gitlab/test_openmp.yml
+  - .gitlab/coverage.yml
+  - .gitlab/coverity.yml
+  - .gitlab/sonarqube.yml
+  - .gitlab/bench_plafrim.yml
+  - .gitlab/pages.yml
+  - .gitlab/release.yml
+
+
+

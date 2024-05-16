@@ -1,0 +1,4 @@
+sobol_primitives.o: pi/SobolQRNG/sobol_primitives.c \
+ /usr/include/stdc-predef.h pi/SobolQRNG/sobol_primitives.h
+/usr/include/stdc-predef.h:
+pi/SobolQRNG/sobol_primitives.h:

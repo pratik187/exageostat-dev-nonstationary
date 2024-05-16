@@ -1,0 +1,45 @@
+# NetCDF C Configuration Summary
+==============================
+
+# General
+-------
+NetCDF Version:		4.7.4
+Dispatch Version:       2
+Configured On:		Thu May 16 10:52:02 +03 2024
+Host System:		x86_64-pc-linux-gnu
+Build Directory: 	/home/nagp/exageostat-dev/dependinces_installations/netcdf-c-4.7.4
+Install Prefix:         /home/nagp/exageostat-dev/dependinces_installations
+
+# Compiling Options
+-----------------
+C Compiler:		/opt/ecrc/gcc/10.2.0/ub18/bin/gcc
+CFLAGS:			
+CPPFLAGS:		-I/home/nagp/exageostat-dev/dependinces_installations/include
+LDFLAGS:		-L/home/nagp/exageostat-dev/dependinces_installations/lib
+AM_CFLAGS:		
+AM_CPPFLAGS:		
+AM_LDFLAGS:		
+Shared Library:		yes
+Static Library:		yes
+Extra libraries:	-lhdf5_hl -lhdf5 -lm -ldl -lz 
+
+# Features
+--------
+NetCDF-2 API:		yes
+HDF4 Support:		no
+HDF5 Support:		yes
+NetCDF-4 API:		yes
+NC-4 Parallel Support:	no
+PnetCDF Support:	no
+DAP2 Support:		no
+DAP4 Support:		no
+Byte-Range Support:	no
+Diskless Support:	yes
+MMap Support:		no
+JNA Support:		no
+CDF5 Support:		yes
+ERANGE Fill Support:	no
+Relaxed Boundary Check:	yes
+SZIP Support:           no
+SZIP Write Support:     no
+Parallel Filters:       yes

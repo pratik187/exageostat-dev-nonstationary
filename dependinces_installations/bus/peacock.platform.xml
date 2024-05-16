@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM 'http://simgrid.gforge.inria.fr/simgrid.dtd'>
+ <platform version="3">
+ <config id="General">
+   <prop id="network/TCP_gamma" value="-1"></prop>
+   <prop id="network/latency_factor" value="1"></prop>
+   <prop id="network/bandwidth_factor" value="1"></prop>
+   <prop id="network/crosstraffic" value="0"></prop>
+   <prop id="network/weight_S" value="0.0"></prop>
+ </config>
+ <AS  id="AS0"  routing="Full">
+   <host id="MAIN" power="1"/>
+   <host id="CPU0" power="2000000000"/>
+   <host id="CPU1" power="2000000000"/>
+   <host id="CPU2" power="2000000000"/>
+   <host id="CPU3" power="2000000000"/>
+   <host id="CPU4" power="2000000000"/>
+   <host id="CPU5" power="2000000000"/>
+   <host id="CPU6" power="2000000000"/>
+   <host id="CPU7" power="2000000000"/>
+   <host id="CPU8" power="2000000000"/>
+   <host id="CPU9" power="2000000000"/>
+   <host id="CPU10" power="2000000000"/>
+   <host id="CPU11" power="2000000000"/>
+   <host id="CPU12" power="2000000000"/>
+   <host id="CPU13" power="2000000000"/>
+   <host id="CPU14" power="2000000000"/>
+   <host id="CPU15" power="2000000000"/>
+   <host id="CPU16" power="2000000000"/>
+   <host id="CPU17" power="2000000000"/>
+   <host id="CPU18" power="2000000000"/>
+   <host id="CPU19" power="2000000000"/>
+   <host id="CPU20" power="2000000000"/>
+   <host id="CPU21" power="2000000000"/>
+   <host id="CPU22" power="2000000000"/>
+   <host id="CPU23" power="2000000000"/>
+   <host id="CPU24" power="2000000000"/>
+   <host id="CPU25" power="2000000000"/>
+   <host id="CPU26" power="2000000000"/>
+   <host id="CPU27" power="2000000000"/>
+   <host id="CPU28" power="2000000000"/>
+   <host id="CPU29" power="2000000000"/>
+   <host id="CPU30" power="2000000000"/>
+   <host id="CPU31" power="2000000000"/>
+   <host id="CPU32" power="2000000000"/>
+   <host id="CPU33" power="2000000000"/>
+   <host id="CPU34" power="2000000000"/>
+   <host id="CPU35" power="2000000000"/>
+   <host id="CPU36" power="2000000000"/>
+   <host id="CPU37" power="2000000000"/>
+   <host id="CPU38" power="2000000000"/>
+   <host id="CPU39" power="2000000000"/>
+
+   <host id="RAM" power="1"/>
+
+   <link id="Host" bandwidth="0.000000" latency="0.000000"/>
+
+ </AS>
+ </platform>

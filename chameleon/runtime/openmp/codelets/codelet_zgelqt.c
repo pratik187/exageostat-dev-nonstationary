@@ -1,0 +1,40 @@
+/**
+ *
+ * @file openmp/codelet_zgelqt.c
+ *
+ * @copyright 2012-2021 Bordeaux INP, CNRS (LaBRI UMR 5800), Inria,
+ *                      Univ. Bordeaux. All rights reserved.
+ *
+ ***
+ *
+ * @brief Chameleon zgelqt OpenMP codelet
+ *
+ * @version 1.0.0
+ * @author Philippe Virouleau
+ * @author Mathieu Faverge
+ * @date 2020-03-03
+ * @precisions normal z -> c d s
+ *
+ */
+#include "chameleon_openmp.h"
+#include "chameleon/tasks_z.h"
+#include "coreblas/coreblas_ztile.h"
+
+void INSERT_TASK_zgelqt( const RUNTIME_option_t *options,
+                       int m, int n, int ib, int nb,
+                       const CHAM_desc_t *A, int Am, int An,
+                       const CHAM_desc_t *T, int Tm, int Tn )
+{
+    CHAM_tile_t *tileA = A->get_blktile( A, Am, An );
+    CHAM_tile_t *tileT = T->get_blktile( T, Tm, Tn );
+    int ws_size = options->ws_wsize;
+
+#pragma omp task firstprivate( ws_size, m, n, ib, tileA, tileT ) depend( inout:tileA[0] ) depend( out:tileT[0] )
+    {
+      CHAMELEON_Complex64_t TAU[ws_size];
+      CHAMELEON_Complex64_t *work = TAU + chameleon_max( m, n );
+
+      TCORE_zlaset( ChamUpperLower, ib, m, 0., 0., tileT );
+      TCORE_zgelqt( m, n, ib, tileA, tileT, TAU, work );
+    }
+}

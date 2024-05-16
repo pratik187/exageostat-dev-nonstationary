@@ -1,0 +1,14 @@
+prefix=/home/nagp/exageostat-dev/hicma/dependencies-prefix
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+
+Name: STARSH
+Description: Software for Testing Accuracy, Reliability and Scalability of Hierarchical computations
+Version: 0.3.0
+URL: https://github.com/ecrc/stars-h
+Cflags: -I${includedir}
+Libs: -L${libdir} -lstarsh
+Libs.private: 
+Requires: 
+Requires.private: 

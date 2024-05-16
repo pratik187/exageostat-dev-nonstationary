@@ -1,0 +1,36 @@
+
+Configuration of STARS-H 0.3.0:
+        Compiler: C .........: /opt/ecrc/gcc/10.2.0/ub18/bin/gcc  (GNU)
+        Linker: .............: /usr/bin/ld
+ 
+        Build type ..........: 
+        Build shared ........: ON
+        CFlags ..............: -fPIC
+        LDFlags (shared lib).: -L/home/nagp/exageostat-dev/dependinces_installations/lib
+        LDFlags (static lib).: 
+        LDFlags (executable).: -L/home/nagp/exageostat-dev/dependinces_installations/lib -Wl,--no-as-needed -Wl,--no-as-needed
+ 
+        Implementation paradigm
+        MPI .................: OFF
+ 
+        Runtime specific
+        StarPU ..............: OFF 
+ 
+        Kernels specific
+        BLAS ................: Intel MKL [/opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_intel_lp64.so /opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_sequential.so /opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_core.so -lpthread -lm]
+        LAPACK...............: Intel MKL [/opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_intel_lp64.so /opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_sequential.so /opt/ecrc/mkl/2020.0.166/mkl/lib/intel64/libmkl_core.so -lpthread -lm]
+ 
+        Other
+        GSL .................: ON [/home/nagp/exageostat-dev/dependinces_installations/lib/libgsl.so /home/nagp/exageostat-dev/dependinces_installations/lib/libgslcblas.so]
+ 
+        Binaries to build
+        documentation .......: FULL
+        examples ............: ON
+        testing .............: ON
+ 
+        STARSH dependencies .:
+ 
+        Definitions: GSL CBLAS_HAS_ZGEMM3M CBLAS_HAS_CGEMM3M MKL
+ 
+        INSTALL_PREFIX ......: /home/nagp/exageostat-dev/hicma/dependencies-prefix
+

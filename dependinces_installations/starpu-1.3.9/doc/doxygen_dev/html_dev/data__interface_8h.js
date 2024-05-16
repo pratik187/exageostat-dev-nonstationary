@@ -1,0 +1,35 @@
+var data__interface_8h =
+[
+    [ "_starpu_interface", "data__interface_8h.html#union__starpu__interface", [
+      [ "variable", "data__interface_8h.html#aae23b442b3641952c512569e674b1e5c", null ],
+      [ "vector", "data__interface_8h.html#a377d3d132c6d0e01a5f20c8867f4199d", null ],
+      [ "matrix", "data__interface_8h.html#ad8af13cce07c2fb06f848a42db00f5cf", null ],
+      [ "block", "data__interface_8h.html#a9155b39eff8e0d8085432825e523429c", null ],
+      [ "csr", "data__interface_8h.html#a83f7cc79d10d07c35c34cdb83944b466", null ],
+      [ "bcsr", "data__interface_8h.html#a9ebbe0c3e143a0976a2d4343d51f6eb1", null ],
+      [ "coo", "data__interface_8h.html#a675440543f708ffb0652733b9a9e9e3c", null ]
+    ] ],
+    [ "_starpu_data_check_not_busy", "data__interface_8h.html#abf548978345c1e47cc0accc133ad640f", null ],
+    [ "_starpu_data_is_multiformat_handle", "data__interface_8h.html#adedc13ef8dae92ec18fe7ed6b496dae3", null ],
+    [ "_starpu_data_free_interfaces", "data__interface_8h.html#ad58ba888467e8ebb0c90b7e9e5de5561", null ],
+    [ "_starpu_data_handle_init", "data__interface_8h.html#a4f8621ba896c91950ac86a442d6c6c56", null ],
+    [ "_starpu_data_initialize_per_worker", "data__interface_8h.html#a83b7864d44640aaa22a97f22a7826e59", null ],
+    [ "_starpu_data_interface_init", "data__interface_8h.html#a4119fff7f83fc5f3833c4ac7f29f5287", null ],
+    [ "__starpu_data_check_not_busy", "data__interface_8h.html#a082bee71505ba13f8acabc539805aa49", null ],
+    [ "_starpu_data_interface_shutdown", "data__interface_8h.html#a44868237d4f98415f192566cdb7bc5f1", null ],
+    [ "_starpu_omp_unregister_region_handles", "data__interface_8h.html#a25fd40080c5df5ec7099bbd76f9c8262", null ],
+    [ "_starpu_omp_unregister_task_handles", "data__interface_8h.html#a999fd28565076a1cd9bbeaa02a9e977c", null ],
+    [ "_starpu_data_interface_get_ops", "data__interface_8h.html#a441aa799247dbd915e4d8e66dca0f6db", null ],
+    [ "_starpu_data_register_ram_pointer", "data__interface_8h.html#acf3c0a9105a14b66ae22223a29557a6b", null ],
+    [ "_starpu_data_unregister_ram_pointer", "data__interface_8h.html#ad19cf79f6f679b717e84acba095266a2", null ],
+    [ "_starpu_data_invalidate_submit_noplan", "data__interface_8h.html#a272bfd9981c2394acee068ffce2a0d04", null ],
+    [ "starpu_interface_matrix_ops", "data__interface_8h.html#aef4358451c69f03e252785f550a9530d", null ],
+    [ "starpu_interface_block_ops", "data__interface_8h.html#ab55191ff6a0c7ab84e8145f31424bb0e", null ],
+    [ "starpu_interface_vector_ops", "data__interface_8h.html#ab16ece6d51176d2fcfc5b8cef6754f6b", null ],
+    [ "starpu_interface_csr_ops", "data__interface_8h.html#af0622ba0b01f8dd2edab6a2232a6c26f", null ],
+    [ "starpu_interface_bcsr_ops", "data__interface_8h.html#aa4280002566d7a4b8250d8cc5ab78173", null ],
+    [ "starpu_interface_variable_ops", "data__interface_8h.html#a4e19e07d0a03f66864cf101b3fa36638", null ],
+    [ "starpu_interface_void_ops", "data__interface_8h.html#a8ad99e710daa2ff3194ee7b2bd96c551", null ],
+    [ "starpu_interface_multiformat_ops", "data__interface_8h.html#a5078e6c219302451f4b9ab2edecc7399", null ],
+    [ "_starpu_global_arbiter", "data__interface_8h.html#a049fe62dd7778abd7a087f9dde1314ef", null ]
+];

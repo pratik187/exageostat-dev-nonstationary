@@ -1,0 +1,28 @@
+# StarPU --- Runtime system for heterogeneous multicore architectures.
+#
+# Copyright (C) 2009-2021  Université de Bordeaux, CNRS (LaBRI UMR 5800), Inria
+#
+# StarPU is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 2.1 of the License, or (at
+# your option) any later version.
+#
+# StarPU is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# See the GNU Lesser General Public License in COPYING.LGPL for more details.
+#
+prefix=/home/nagp/exageostat-dev/dependinces_installations
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+pkglibdir=${libdir}/starpu
+includedir=${prefix}/include
+
+Name: starpu
+Description: offers support for heterogeneous multicore architecture
+Version: 1.3.9
+Cflags: -I${includedir}/starpu/1.3  
+Libs:  -L${libdir} -lstarpu-1.3   -lpthread
+Libs.private: -L/home/nagp/exageostat-dev/dependinces_installations/lib -gdwarf-2 -g3 -lrt -lrt -lm  -lpthread   -L/home/nagp/exageostat-dev/dependinces_installations/lib -lhwloc         -L/opt/ecrc/mkl/2020.0.166/mkl/lib/intel64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lm -lpthread -ldl  
+Requires: hwloc

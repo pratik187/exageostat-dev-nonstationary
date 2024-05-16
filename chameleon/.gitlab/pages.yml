@@ -1,0 +1,17 @@
+---
+pages:
+  image: registry.gitlab.inria.fr/solverstack/docker/distrib
+  stage: deploy
+  dependencies: []
+  artifacts:
+    name: chameleon_doc
+    expire_in: 1 week
+    paths:
+      - public
+  variables:
+    VERSION: pages
+  script:
+    - ./tools/pages.sh
+  only:
+    - master@solverstack/chameleon
+    - /^ci.*$/
