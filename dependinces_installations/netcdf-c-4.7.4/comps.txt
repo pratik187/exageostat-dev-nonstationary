@@ -1,1 +1,0 @@
-CPPFLAGS=-I/home/nagp/exageostat-dev/dependinces_installations/include CC=/opt/ecrc/gcc/10.2.0/ub18/bin/gcc CFLAGS= LDFLAGS=-L/home/nagp/exageostat-dev/dependinces_installations/lib LIBS=
