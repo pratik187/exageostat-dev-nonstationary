@@ -718,7 +718,7 @@ include_directories(${CMAKE_SOURCE_DIR}/exageostat_approx/runtime/starpu/include
 set(EXAGEOSTAT_CHAMELEON_SRC "")
 set(EXAGEOSTAT_SRC "")
 #target_link_libraries (exageostat $ENV{HOME}/codes/TF_C_API/lib/libtensorflow.so)
-set(TENSORFLOW_DIR "/home/nagp/codes/TF_C_API")
+set(TENSORFLOW_DIR "$ENV{HOME}/codes/TF_C_API")
 include_directories(${TENSORFLOW_DIR}/include)
 find_library(TENSORFLOW_LIB tensorflow 
     HINTS ${TENSORFLOW_DIR}/lib)
