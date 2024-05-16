@@ -90,7 +90,7 @@ Installation
 Installation requires at least **CMake** of version 2.8.12. To build ExaGeoStat,
 please follow these instructions:
 
-1.  Download and save the following [installation scripts]([https://drive.google.com/drive/folders/1ORpAVR891K17UgEawpd8eVsK5viBgdEe?usp=drive_link]) in the home directory then run the following commands from the command prompt. 
+1.  Download and save the following [installation scripts](https://drive.google.com/drive/folders/1ORpAVR891K17UgEawpd8eVsK5viBgdEe?usp=drive_link) in the home directory then run the following commands from the command prompt. 
 
         bash install_tf_dependencies.sh
         bash install_exageostat-dev-nonstationary.sh
@@ -99,7 +99,7 @@ please follow these instructions:
 
         cd exageostat-dev-nonstationary
 
-3.  Download the Model_Example folder from [here]([https://drive.google.com/drive/folders/1qQH6PMv7zUii89pvTs50zaaWbq2Z2uIN?usp=sharing]) and place it inside `exageostat-dev-nonstationary/build` directory
+3.  Download the Model_Example folder from [here](https://drive.google.com/drive/folders/1qQH6PMv7zUii89pvTs50zaaWbq2Z2uIN?usp=sharing) and place it inside `exageostat-dev-nonstationary/build` directory
 
 4.  Go to `build` directory
 
