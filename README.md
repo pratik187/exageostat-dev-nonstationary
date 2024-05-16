@@ -92,8 +92,8 @@ please follow these instructions:
 
 1.  Download and save the following [installation scripts]([https://drive.google.com/drive/folders/1ORpAVR891K17UgEawpd8eVsK5viBgdEe?usp=drive_link]) in the home directory then run the following commands from the command prompt. 
 
-        `bash install_tf_dependencies.sh
-        bash install_exageostat-dev-nonstationary.sh`
+        bash install_tf_dependencies.sh
+        bash install_exageostat-dev-nonstationary.sh
     
 2.  Go into ExaGeoStat folder
 
