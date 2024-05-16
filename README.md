@@ -97,13 +97,13 @@ please follow these instructions:
     
 2.  Go into ExaGeoStat folder
 
-        `cd exageostat-dev-nonstationary`
+        cd exageostat-dev-nonstationary
 
 3.  Download the Model_Example folder from [here]([https://drive.google.com/drive/folders/1qQH6PMv7zUii89pvTs50zaaWbq2Z2uIN?usp=sharing]) and place it inside `exageostat-dev-nonstationary/build` directory
 
 4.  Go to `build` directory
 
-        `cd build`
+        cd build
 
 5.  Build EXAGEOSTAT
 
@@ -129,7 +129,7 @@ Example
 
 6.  Check the installation by running the following example
 
-        `./examples/synthetic_dmle_test --test --N=20000 --dts=960 --ncores=30 --computation=exact --kernel=?:?:?:?:?:? --ikernel=0.02:0.8:0.6:0.1:1:1 --olb=0.001:0.001:0.001:0.001:0.001:0.01 --oub=5:5:5:5:5:5 --zvecs=1 --opt_iters=1000 --opt_tol=7 --seed=3 --kernel_fun=univariate_matern_non_stat_estimation --log`
+        ./examples/synthetic_dmle_test --test --N=20000 --dts=960 --ncores=30 --computation=exact --kernel=?:?:?:?:?:? --ikernel=0.02:0.8:0.6:0.1:1:1 --olb=0.001:0.001:0.001:0.001:0.001:0.01 --oub=5:5:5:5:5:5 --zvecs=1 --opt_iters=1000 --opt_tol=7 --seed=3 --kernel_fun=univariate_matern_non_stat_estimation --log
 
 The above will generate a nonstationary data with 20k locations. The dataset is generated and parameters are estimated with two splits. Parameter estimations for each of the splits will be printed in the terminal at the end. 
       
